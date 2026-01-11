@@ -20,6 +20,17 @@ const squadre = [
     falliSubiti : 0,
     },
 ];
+
+for (let index = 0; index < squadre.length; index++) {
+    squadre[index].puntiFatti = getRandomInt(1,15);
+    squadre[index].falliSubiti = getRandomInt(0,12);
+    console.log(squadre[index].nome, "Punti fatti", squadre[index].puntiFatti, "Falli subiti", squadre[index].falliSubiti);  
+};
+
+
+function getRandomInt(min, max){
+  return Math.floor( Math.random() * (max - min + 1) + min);
+}
 const squadreFs = squadre.map(user => ({
   nomeSquadra: user.nome,
   falliSubitiFs: user.falliSubiti
